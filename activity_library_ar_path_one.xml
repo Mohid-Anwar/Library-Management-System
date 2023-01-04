@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+
+    android:contentDescription="@string/app_name"
+    android:fillViewport="true"
+    android:background="@drawable/ar_lib_path_one_hallway"
+
+
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".library_ar_path_one">
+
+
+        <Button
+            android:id="@+id/lib_green_oval"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="420dp"
+            android:background="@drawable/input_bg"
+            android:contentDescription="@string/app_name"
+            android:foreground="@drawable/input_bg"
+            android:textColor="@android:color/holo_orange_light"
+            app:backgroundTint="#BFBA921A"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.608"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="DuplicateSpeakableTextCheck,DuplicateSpeakableTextCheck" />
+
+        <Button
+            android:id="@+id/home_icon_activity_lib_path_two"
+            android:layout_width="48dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/input_bg"
+            android:contentDescription="@string/app_name"
+            android:foreground="@drawable/input_bg"
+            android:textColor="@android:color/holo_orange_light"
+            app:backgroundTint="#FFFFFF"
+            app:icon="@drawable/ic_baseline_home_24"
+            app:iconTint="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.044"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="84dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/lib_distance_status" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

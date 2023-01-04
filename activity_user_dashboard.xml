@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/user_dashboard_background"
+    android:fillViewport="true"
+    tools:layout_editor_absoluteX="1dp"
+    tools:layout_editor_absoluteY="1dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        tools:context=".UserDashboard"
+        >
+
+
+        <ImageView
+
+            android:layout_width="227dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="16dp"
+
+            android:contentDescription="@string/my_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mohid_img" />
+
+        <TextView
+
+            android:id="@+id/textView6"
+            android:layout_width="292dp"
+            android:layout_height="109dp"
+            android:layout_marginTop="284dp"
+            android:fontFamily="@font/advent_pro_semibold"
+            android:text="Mohid Anwar\nMember"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="48sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.495"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:id="@+id/textView5"
+            android:layout_width="320dp"
+            android:layout_height="34dp"
+            android:layout_marginTop="404dp"
+            android:fontFamily="@font/advent_pro_light"
+            android:text="Welcome Back"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/searchArBtn"
+            android:layout_width="182dp"
+            android:layout_height="102dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="100dp"
+            android:background="#00000000"
+            android:contentDescription="@string/select"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/search_ar_bg" />
+
+        <ImageButton
+            android:id="@+id/scanArBtn"
+            android:layout_width="211dp"
+            android:layout_height="103dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="100dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintStart_toEndOf="@+id/searchArBtn"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            app:srcCompat="@drawable/scan_ar_bg"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <ImageButton
+            android:id="@+id/topUpAccountBtn"
+            android:layout_width="195dp"
+            android:layout_height="101dp"
+            android:layout_marginTop="20dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintEnd_toStartOf="@+id/logoutBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/searchArBtn"
+            app:srcCompat="@drawable/top_up_acc_bg" />
+
+        <ImageButton
+            android:id="@+id/logoutBtn"
+            android:layout_width="206dp"
+            android:layout_height="101dp"
+            android:layout_marginTop="19dp"
+            android:background="#00FFFFFF"
+            android:contentDescription="@string/app_name"
+            app:layout_constraintBottom_toBottomOf="@+id/topUpAccountBtn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/scanArBtn"
+            app:srcCompat="@drawable/logout_bg" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+
+

@@ -1,18 +1,321 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent">
+<androidx.constraintlayout.widget.ConstraintLayout
+
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/email_username_layout_mainActivity"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="30"
+        app:endIconMode="clear_text"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/ic_baseline_error_24"
+        app:errorTextColor="#757575"
+        app:helperText="* Required"
+        app:helperTextEnabled="true"
+
+        app:helperTextTextColor="#FF0000"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/header2"
+        app:startIconDrawable="@drawable/username_icon">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/usernameInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:maxLength="21"
+            android:textColorHint="#757575" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="179dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginLeft="25dp"
+        android:contentDescription="LINE"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/or"
+        app:layout_constraintStart_toStartOf="@+id/or"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.4"
+        app:srcCompat="@drawable/line"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
     <TextView
+        android:id="@+id/forgotPasswordbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="40dp"
+        android:text="Forgot Password?"
+        android:textColor="#039BE5"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/passwordLayout_activity_main"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/passwordLayout_activity_main"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLayout_activity_main" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordLayout_activity_main"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        app:counterEnabled="true"
+        app:counterMaxLength="16"
+        app:endIconMode="password_toggle"
+        app:errorEnabled="true"
+        app:errorIconDrawable="@drawable/ic_baseline_error_24"
+        app:errorTextColor="#757575"
+
+        app:helperText="* 8 Digit Alpha-Numeric Password"
+        app:helperTextEnabled="true"
+        app:helperTextTextColor="#FF0000"
+
+        app:layout_constraintEnd_toEndOf="@+id/email_username_layout_mainActivity"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/email_username_layout_mainActivity"
+        app:layout_constraintTop_toBottomOf="@+id/email_username_layout_mainActivity"
+        app:startIconDrawable="@drawable/ic_security"
+
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:maxLength="16"
+            android:textColorHint="#757575"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="383dp"
+
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="O R "
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordbtn" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="179dp"
+        android:layout_height="15dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:contentDescription="Line"
+        app:layout_constraintEnd_toStartOf="@+id/or"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/forgotPasswordbtn"
+        app:srcCompat="@drawable/line"
+        tools:ignore="ImageContrastCheck" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="9dp"
+        android:layout_marginTop="84dp"
+        android:contentDescription="@string/line"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:srcCompat="@drawable/line"
+        tools:ignore="ImageContrastCheck,ImageContrastCheck" />
+
+    <TextView
+        android:id="@+id/footer"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="@string/footer_text"
+        android:textColor="#757575"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/or">
+
+        <TextView
+            android:id="@+id/noAccount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No Account?  "
+            android:textColor="#000000"
+            android:textIsSelectable="false"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/SignIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="SignIn"
+            android:textColor="#039BE5"
+            android:textStyle="bold|italic" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="302dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/input_bg"
+        android:text="S u b m i t"
+        android:textColor="#000000"
+        app:backgroundTint="#996100FF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        tools:ignore="TextContrastCheck,TextContrastCheck,TextContrastCheck" />
+
+    <TextView
+        android:id="@+id/lmsHeader"
+        android:layout_width="407dp"
+        android:layout_height="92dp"
+        android:background="#9C757575"
+        android:gravity="center_horizontal"
+        android:text="LMS"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.024" />
+
+    <TextView
+        android:id="@+id/header2"
+        android:layout_width="413dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="40dp"
+        android:background="#3E757575"
+        android:gravity="center"
+        android:text="LIBRARY MANAGEMENT SYSTEM"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lmsHeader" />
+
+    <TextView
+        android:id="@+id/header3"
+        android:layout_width="411dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="92dp"
+        android:background="#3E757575"
+        android:gravity="center"
+
+        android:text="&quot; Welcome To LMS \nPlease Enter Your Credentials To Get Started &quot;"
+
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="italic"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lmsHeader" />
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/inputPassword"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="24dp"-->
+    <!--        android:autofillHints=""-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="Enter 8 digit Password"-->
+    <!--        android:inputType="textPassword"-->
+    <!--        android:minHeight="48dp"-->
+
+    <!--        android:textColor="@color/material_dynamic_neutral_variant40"-->
+    <!--        android:textColorHint="#757575"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/inputUsername"-->
+    <!--        app:layout_constraintHorizontal_bias="1.0"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/inputUsername"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/inputUsername"-->
+    <!-- />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/inputUsername"-->
+    <!--        android:layout_width="202dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_marginTop="108dp"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:layout_marginRight="16dp"-->
+    <!--        android:autofillHints=""-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="Enter Username e.g. qt_123"-->
+    <!--        android:inputType="textPersonName"-->
+    <!--        android:minHeight="48dp"-->
+    <!--        android:paddingLeft="10sp"-->
+    <!--        android:paddingRight="10sp"-->
+    <!--        android:textColor="@color/material_dynamic_neutral_variant40"-->
+    <!--        android:textColorHint="#757575"-->
+    <!--        android:textSize="14sp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toEndOf="@+id/usernameText"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/header2" />-->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
